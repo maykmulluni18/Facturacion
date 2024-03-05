@@ -1,0 +1,26 @@
+create TABLE orders_schedules(
+  `id` int(11) NOT NULL ,
+  `name` varchar(100),
+  `sale_price` FLOAT,
+  `owner` VARCHAR(100),
+  `delivery_date` TIMESTAMP,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) 
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+===================================================================
+cuando es por semana:
+hacer un array con el nombre de los dias de la semana , dentro tiene q haber un array con la
+informacion de las ordenes que se tiene de ese dia
+    donde  
+    [
+        {
+            "name_day":"Lunes",
+            "data":[
+                // informacion de las ordenes
+            ]
+        }
+    ]
+cuando es por mes:
+la misma logica, pero como es de 30 dias, pero el nombre de los dias se repiten, hacer un CSSLayerBlockRule
+de 30 y asignar las ordenes de acuerdo al numero de dias que corresponder.
